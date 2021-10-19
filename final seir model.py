@@ -39,6 +39,8 @@ gamma = 1/D
 delta = 1.0 / 5  # incubation period of five days
 s = 0.02
 alpha = 0.025
+
+#predicting how covid will spread under different lockdown levels after 165 days have already passed since Covid began in India
 def R_0(t):
     if t<L:
         return 3.5
@@ -55,7 +57,9 @@ def R_0(t):
     elif t> Sixth and t<Seventh:
         return 1.22
     elif t> Seventh:
+        
         return 3
+    
 def beta(t):
     return R_0(t) * gamma
 
